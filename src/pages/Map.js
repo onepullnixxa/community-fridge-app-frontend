@@ -17,8 +17,9 @@ function Map() {
     zoom: 3,
     bearing: 0,
     pitch: 0,
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: "75vw",
+    height: "75vh",
+    borderradius: "5px",
   });
 
   return (
