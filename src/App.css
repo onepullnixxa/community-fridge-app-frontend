@@ -1,8 +1,28 @@
+:root {
+  --fs-xl: 4rem;
+  --fs-600: 1.5rem;
+  --fs-500: 1.25rem;
+  --fs-400: 1.25rem;
+  
+  --nav: .9em;
+  --title: 4vh;
+}
+
 * {
-  background-color: rgb(255, 145, 0);
+  background-color: #ff7e00;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+@font-face {
+  font-family: 'Sans Symbols';
+  src: url(./fonts/NotoSansSymbols2-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Univers-next";
+  src: url(./fonts/univers-next-pro-light.woff);
 }
 
 @font-face {
@@ -10,11 +30,88 @@
   src: url(fonts/2F0FA1_3_0.woff);
 }
 
-/* INDEX */
-.main-text {
+
+/* HEADER */
+
+.nav-list {
   display: flex;
-  font-family: 'has';
+  font-family: 'Univers-next', 'Sans Symbols';
+  font-size: var(--nav);
+  text-decoration: none;
+  background: inherit;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  padding: 1rem 0;
+
+}
+
+.nav-item {
+  list-style: none;
+  margin-right: 2rem;
+}
+
+.nav-item:first-child {
+  color: #ff0000;
+  margin-right: auto;
+  margin-left: 2rem;
+}
+
+#home-btn:hover {
+  color: #ffffff;
+  transition: .4s ease;
+}
+
+#about {
+  color: #ff0000;
+}
+
+#about:hover {
+  color: #ffffff;
+  transition: .4s ease;
+}
+
+#add {
+  color: #ff0000;
+}
+
+#add:hover {
+  color: #ffffff;
+  transition: .4s ease;
+}
+
+
+/* INDEX */
+.main-container {
+  color: #ff0000;
+}
+
+.main-description {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 64px;
+  font-family: 'Univers-next';
+  font-size: var(--fs-400);
+  margin-top: 50vh;
 }
+
+.main-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'has';
+  font-size: var(--fs-xl);
+  margin-top: var(--title);
+}
+
+@media (min-width: 40em) {
+  :root {
+    --fs-xl: 8rem;
+    --fs-600: 3rem;
+    --fs-400: 1.1rem;
+
+    --nav: 24px;
+    --title: 15vh;
+  }
+}
+

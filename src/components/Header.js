@@ -1,11 +1,35 @@
-import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-function Header(props) {
-    return(
-        <header className="nav">
-
-        </header>
-    )
+function Header() {
+  return (
+    <Router>
+      <navbar>
+        <ul className="nav-list">
+          <li className="nav-item">
+            <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+              <h4 id="home-btn">⬤ Map</h4>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/about"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <h4 id="about">⭘ About</h4>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/add"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <h4 id="add">⭘ Add A Fridge Near You</h4>
+            </Link>
+          </li>
+        </ul>
+      </navbar>
+    </Router>
+  );
 }
 
 export default Header;
