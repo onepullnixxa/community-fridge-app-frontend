@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import { useEffect, useState } from "react";
 import Index from "../pages/Index";
-import About from "../pages/About";
+import Map from "../pages/Map";
+import Add from "../pages/Add";
 
 
 function Main(props) {
@@ -56,8 +57,11 @@ function Main(props) {
     <main>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/">
+            <Route index element={<Index />} />
+            <Route path="map" element={<Map />} />
+            <Route path="add" element={<Add />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </main>

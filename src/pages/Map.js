@@ -1,4 +1,4 @@
-function About () {
+function Map () {
     return (
         <div className="aboutPageText">
             <h3 className="firstLineText">Mutual Aid Resource is a website intent on boosting aid requests from </h3> <br />
@@ -9,4 +9,4 @@ function About () {
     )
 };
 
-export default About;
+export default Map;
