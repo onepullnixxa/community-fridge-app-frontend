@@ -1,6 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import { useEffect, useState } from "react";
 import Index from "../pages/Index";
+import About from "../pages/About";
 
 
 function Main(props) {
@@ -52,13 +53,14 @@ function Main(props) {
   //   useEffect(() => getPersons(), []);
 
   return (
-    <Router>
-      <main>
+    <main>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/about" element={<About />} />
         </Routes>
-      </main>
-    </Router>
+      </BrowserRouter>
+    </main>
   );
   //           path="/home/:id"
   //           render={(rp) => (
