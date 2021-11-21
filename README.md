@@ -11,7 +11,7 @@ Community fridges are free and open-access to any individual or family in need o
 - JSX
 - React 6
 - Django/Python
-- Google Maps API
+- Mapbox API
 - Heroku
 - Netlify
 - Figma
