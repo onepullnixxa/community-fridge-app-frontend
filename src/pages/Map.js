@@ -1,12 +1,41 @@
-function Map () {
-    return (
-        <div className="aboutPageText">
-            <h3 className="firstLineText">Mutual Aid Resource is a website intent on boosting aid requests from </h3> <br />
-            <h4 className="secondLineText">Black trans, queer, and nonbinary</h4><em className="italicText">individuals</em><h3 className="fourthLineText">in need of aid or assistance.</h3>
+import React, { useState } from 'react';
+import ReactMapGL, {GeolocateControl} from 'react-map-gl';
 
-            <em className="tributeText">This website is dedicated in memory of Oluwatoyin Salau.</em>
-        </div>
-    )
+const MAPBOX_TOKEN = `${process.env.REACT_APP_MAPBOX_TOKEN}`;
+
+const geolocateStyle = {
+  top: 0,
+  left: 0,
+  margin: 10
 };
+const positionOptions = {enableHighAccuracy: true};
 
-export default Map;
+function Map() {
+  const [viewport, setViewport] = useState({
+    latitude: 37.8,
+    longitude: 96,
+    zoom: 3,
+    bearing: 0,
+    pitch: 0,
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  return (
+    <ReactMapGL
+      {...viewport}
+      mapStyle="mapbox://styles/mapbox/dark-v9"
+      onViewportChange={setViewport}
+      mapboxApiAccessToken={MAPBOX_TOKEN}
+    >
+      <GeolocateControl
+        style={geolocateStyle}
+        positionOptions={positionOptions}
+        trackUserLocation
+        auto
+      />
+    </ReactMapGL>
+  );
+}
+
+export default Map
