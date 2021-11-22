@@ -23,14 +23,14 @@ function Add(props) {
       image: "",
     });
 
-    // const handleToggle = (event) => {
-    //     event.preventDefault();
-    //     props.createFridge(newForm);
-    //     setNewForm(({ needs_cleaning, ...prevState}) =>
-    //     ({ ...prevState,
-    //         needs_cleaning: !needs_cleaning,
-    //     }));
-    // };
+    const handleToggle = (event) => {
+      event.preventDefault();
+      props.createFridge(newForm);
+      setNewForm(({ needs_cleaning, ...prevState }) => ({
+        ...prevState,
+        needs_cleaning: !needs_cleaning,
+      }));
+    };
   };
 
   return (
@@ -64,60 +64,59 @@ function Add(props) {
           </div>
           <div>
             <input
-                type="checkbox"
-                value={newForm.produce_needed}
-                name="produce_needed"
-                className="produce-box"
-                toggle
-                // onChange={handleToggle}
+              type="checkbox"
+              value={newForm.produce_needed}
+              name="produce_needed"
+              className="produce-box"
+              toggle
+              // onChange={handleToggle}
             />
             <span className="checkbox-text">Produce Needed?</span>
           </div>
           <div>
             <input
-                type="checkbox"
-                value={newForm.fruits_needed}
-                name="fruits_needed"
-                className="fruits-box"
-                toggle
+              type="checkbox"
+              value={newForm.fruits_needed}
+              name="fruits_needed"
+              className="fruits-box"
+              toggle
+              // onChange={handleToggle}
             />
             <span className="checkbox-text">Fruits Needed?</span>
           </div>
-          <div >
+          <div>
             <input
-                type="checkbox"
-                value={newForm.canned_foods_needed}
-                name="canned_foods_needed"
-                className="canned-box"
-                toggle
+              type="checkbox"
+              value={newForm.canned_foods_needed}
+              name="canned_foods_needed"
+              className="canned-box"
+              toggle
+              // onChange={handleToggle}
             />
             <span className="checkbox-text">Canned Foods Needed?</span>
           </div>
           <div>
             <input
-                type="checkbox"
-                value={newForm.needs_cleaning}
-                name="needs_cleaning"
-                className="cleaning-box"
-                toggle
+              type="checkbox"
+              value={newForm.needs_cleaning}
+              name="needs_cleaning"
+              className="cleaning-box"
+              toggle
+              // onChange={handleToggle}
             />
             <span className="checkbox-text">Fridge Needs Cleaning?</span>
           </div>
           <div>
             <input
-                    type="checkbox"
-                    value={newForm.maintenance_needed}
-                    name="maintenance_needed"
-                    className="maintenance-box"
-                    toggle
-                />
-                <span className="checkbox-text">Fridge Needs Repair?</span>
+              type="checkbox"
+              value={newForm.maintenance_needed}
+              name="maintenance_needed"
+              className="maintenance-box"
+              toggle
+              // onChange={handleToggle}
+            />
+            <span className="checkbox-text">Fridge Needs Repair?</span>
           </div>
-
-
-
-
-
         </form>
       </fieldset>
     </div>

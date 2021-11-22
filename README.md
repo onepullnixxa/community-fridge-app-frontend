@@ -15,6 +15,7 @@ Community fridges are free and open-access to any individual or family in need o
 - Heroku
 - Netlify
 - Figma
+- Auth0 Authentication
 
 ## Wireframe + ERD
 

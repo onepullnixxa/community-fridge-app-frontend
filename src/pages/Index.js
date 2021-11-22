@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Index(props) {
+function Index() {
   return (
     <div className="main-container">
       <h5 className="main-description">
