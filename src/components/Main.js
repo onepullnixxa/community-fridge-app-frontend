@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 // import { useEffect, useState } from "react";
 import Index from "../pages/Index";
 import Map from "../pages/Map";
@@ -55,7 +55,7 @@ function Main(props) {
 
   return (
     <main>
-      <Router>
+
         <Routes>
           <Route path="/">
             <Route index element={<Index />} />
@@ -63,7 +63,7 @@ function Main(props) {
             <Route path="add" element={<Add />} />
           </Route>
         </Routes>
-      </Router>
+
     </main>
   );
   //           path="/:id"

@@ -1,8 +1,8 @@
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <Router>
+    // <Router>
       <navbar>
         <ul className="nav-list">
           <li className="nav-item">
@@ -22,7 +22,7 @@ function Header() {
           </li>
         </ul>
       </navbar>
-    </Router>
+    // </Router>
   );
 }
 
