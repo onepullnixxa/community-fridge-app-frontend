@@ -124,13 +124,19 @@ fieldset {
   font-size: var(--fs-400);
   border-color: #ff0000;
   border-style: solid;
-  border-width: .25rem;
+  border-width: .15rem;
   padding-left: var(--fieldsetpad);
 }
 
 fieldset > legend {
   margin-left: var(--legendmargin);
 }
+
+.checkbox-text {
+  font-family: 'Univers-next';
+  font-size: var(--fs-400);
+}
+
 
 @media (min-width: 40em) {
   :root {

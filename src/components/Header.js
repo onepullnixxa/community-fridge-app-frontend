@@ -25,6 +25,7 @@ function Header() {
             >
               <h4 id="add">⭘ Add A Fridge</h4>
             </Link>
+          
           </li>
         </ul>
       </navbar>
