@@ -17,20 +17,20 @@ function Add(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.createFridge(newForm);
+    props.createFridges(newForm);
     setNewForm({
       fridge_name: "",
       image: "",
     });
 
-    const handleToggle = (event) => {
-      event.preventDefault();
-      props.createFridge(newForm);
-      setNewForm(({ needs_cleaning, ...prevState }) => ({
-        ...prevState,
-        needs_cleaning: !needs_cleaning,
-      }));
-    };
+  //   const handleToggle = (event) => {
+  //     event.preventDefault();
+  //     props.createFridges(newForm);
+  //     setNewForm(({ needs_cleaning, ...prevState }) => ({
+  //       ...prevState,
+  //       needs_cleaning: !needs_cleaning,
+  //     }));
+  //   };
   };
 
   return (
@@ -116,6 +116,7 @@ function Add(props) {
               // onChange={handleToggle}
             />
             <span className="checkbox-text">Fridge Needs Repair?</span>
+            <input className="submitButton" type="submit" value="Submit" />
           </div>
         </form>
       </fieldset>
