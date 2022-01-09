@@ -23,41 +23,53 @@ function Add(props) {
       image: "",
     });
 
-  //   const handleToggle = (event) => {
-  //     event.preventDefault();
-  //     props.createFridges(newForm);
-  //     setNewForm(({ needs_cleaning, ...prevState }) => ({
-  //       ...prevState,
-  //       needs_cleaning: !needs_cleaning,
-  //     }));
-  //   };
+    //   const handleToggle = (event) => {
+    //     event.preventDefault();
+    //     props.createFridges(newForm);
+    //     setNewForm(({ needs_cleaning, ...prevState }) => ({
+    //       ...prevState,
+    //       needs_cleaning: !needs_cleaning,
+    //     }));
+    //   };
   };
 
   return (
-    <div add-container>
-      <fieldset className="add-form">
-        <legend className="form-title">
-          <h4>Please Add Details Below</h4>
-        </legend>
+    <div className="add-form-border">
+      <div className="add-titles">
+        <h1 id="add-main-text">Add Form</h1>
+        <h2 id="add-paragraph">
+          If you’d like to contribute to the Community Fridge App’s map and
+          create a local fridge, please add the following details.
+        </h2>
+      </div>
+      <div>
         <form onSubmit={handleSubmit}>
-          <div>
+          <div className="form-box">
+            <label id="fridge-label" for="fridge-name">
+              Fridge Name
+            </label>
             <input
               type="text"
               value={newForm.fridge_name}
               name="fridge_name"
-              className="name-field"
-              placeholder="Enter Fridge Name"
+              id="fridge-name"
+              className="input-control"
+              placeholder="Enter fridge name"
               onChange={handleChange}
               required
             />
           </div>
-          <div>
+          <div className="form-box">
+            <label id="image-label" for="image">
+              Fridge Image
+            </label>
             <input
-              type="text"
+              type="url"
               value={newForm.image}
               name="image"
-              className="image-field"
-              placeholder="Enter Image URL"
+              id="image"
+              className="input-control"
+              placeholder="Enter link address"
               onChange={handleChange}
               required
             />
@@ -67,7 +79,7 @@ function Add(props) {
               type="checkbox"
               value={newForm.produce_needed}
               name="produce_needed"
-              className="produce-box"
+              className=""
               toggle
               // onChange={handleToggle}
             />
@@ -116,10 +128,12 @@ function Add(props) {
               // onChange={handleToggle}
             />
             <span className="checkbox-text">Fridge Needs Repair?</span>
-            <input className="submitButton" type="submit" value="Submit" />
+            <div>
+              <input className="submitButton" type="submit" value="Submit" />
+            </div>
           </div>
         </form>
-      </fieldset>
+      </div>
     </div>
   );
 }

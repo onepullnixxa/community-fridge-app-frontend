@@ -35,6 +35,7 @@
 
 body {
   background-color: #ff7e00;
+  color: #ff0000;
 }
 
 /* HEADER */
@@ -44,12 +45,9 @@ body {
   font-family: 'Univers-next', 'Sans Symbols';
   font-size: var(--nav);
   text-decoration: none;
-  background: inherit;
   justify-content: flex-end;
   align-items: center;
   margin: 0;
-  padding: 1rem 0;
-
 }
 
 .nav-item {
@@ -58,39 +56,27 @@ body {
 }
 
 .nav-item:first-child {
-  color: #ff0000;
   margin-right: auto;
   margin-left: 2rem;
 }
 
 #home-btn:hover {
   color: #ffffff;
-  transition: .4s ease;
-}
-
-#about {
-  color: #ff0000;
+  transition: .3s ease;
 }
 
 #about:hover {
   color: #ffffff;
-  transition: .4s ease;
-}
-
-#add {
-  color: #ff0000;
+  transition: .35s ease;
 }
 
 #add:hover {
   color: #ffffff;
-  transition: .4s ease;
+  transition: .35s ease;
 }
 
 
 /* INDEX */
-.main-container {
-  color: #ff0000;
-}
 
 .main-description {
   display: flex;
@@ -99,7 +85,7 @@ body {
   font-family: 'Univers-next';
   font-size: var(--fs-400);
   margin-top: 45vh;
-  animation: transitionIn 1500ms ease-in;
+  animation: transitionIn 1100ms ease-in;
 }
 
 .main-title {
@@ -109,27 +95,50 @@ body {
   font-family: 'has';
   font-size: var(--fs-xl);
   margin-top: var(--title);
-  animation: transitionIn 1500ms ease-in;
+  animation: transitionIn 1100ms ease-in;
 }
 
 /* ADD */
-fieldset {
+.add-form-border {
   display: flex;
-  align-items: center;
-  margin-top: 20vh;
-  margin-left: var(--fieldsetmarginleft);
-  margin-right: var(--fieldsetmarginright);
-  color: #ff0000;
-  font-family: 'Univers-next';
-  font-size: var(--fs-400);
-  border-color: #ff0000;
-  border-style: solid;
-  border-width: .15rem;
-  padding-left: var(--fieldsetpad);
+  border: 4px solid #ff0000;
+  border-radius: 15px;
+  height:80vh;
+  margin: 40px;
+  animation: transitionIn 1100ms ease-in;
 }
 
-fieldset > legend {
-  margin-left: var(--legendmargin);
+.add-titles {
+  font-family: 'has';
+  display: flex;
+  flex-direction: column;
+  border: 5px solid blue;
+  margin: 40px 0px 40px 40px;
+  width: 575px;
+}
+
+#add-paragraph {
+  margin-top: 45px;
+}
+
+form {
+  border: 4px solid green;
+  display: flex;
+  flex-direction: column;
+  margin-top: 250px;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-family: 'has';  
+}
+
+.input-control {
+  width: 100%;
 }
 
 .checkbox-text {
