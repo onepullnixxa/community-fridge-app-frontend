@@ -36,16 +36,16 @@ function Add(props) {
   return (
     <div className="add-form-border">
       <div className="add-titles">
-        <h1 id="add-main-text">Add Form</h1>
+        <h1 id="add-main-text">Add a Fridge</h1>
         <h2 id="add-paragraph">
           If you’d like to contribute to the Community Fridge App’s map and
           create a local fridge, please add the following details.
         </h2>
       </div>
-      <div>
+      <div className="form-container">
         <form onSubmit={handleSubmit}>
           <div className="form-box">
-            <label id="fridge-label" for="fridge-name">
+            <label className="label-text" for="fridge-name">
               Fridge Name
             </label>
             <input
@@ -54,13 +54,13 @@ function Add(props) {
               name="fridge_name"
               id="fridge-name"
               className="input-control"
-              placeholder="Enter fridge name"
+              // placeholder="Please enter the main street"
               onChange={handleChange}
               required
             />
           </div>
           <div className="form-box">
-            <label id="image-label" for="image">
+            <label className="label-text" for="image">
               Fridge Image
             </label>
             <input
@@ -69,65 +69,66 @@ function Add(props) {
               name="image"
               id="image"
               className="input-control"
-              placeholder="Enter link address"
+              // placeholder="Enter link address"
               onChange={handleChange}
               required
             />
           </div>
+          <label id="checklist-header">Checklist:</label>
           <div>
             <input
               type="checkbox"
               value={newForm.produce_needed}
               name="produce_needed"
-              className=""
+              className="checkboxes"
               toggle
               // onChange={handleToggle}
             />
-            <span className="checkbox-text">Produce Needed?</span>
+            <span className="checkbox-text">Produce Needed</span>
           </div>
           <div>
             <input
               type="checkbox"
               value={newForm.fruits_needed}
               name="fruits_needed"
-              className="fruits-box"
+              className="checkboxes"
               toggle
               // onChange={handleToggle}
             />
-            <span className="checkbox-text">Fruits Needed?</span>
+            <span className="checkbox-text">Fruits Needed</span>
           </div>
           <div>
             <input
               type="checkbox"
               value={newForm.canned_foods_needed}
               name="canned_foods_needed"
-              className="canned-box"
+              className="checkboxes"
               toggle
               // onChange={handleToggle}
             />
-            <span className="checkbox-text">Canned Foods Needed?</span>
+            <span className="checkbox-text">Canned Foods Needed</span>
           </div>
           <div>
             <input
               type="checkbox"
               value={newForm.needs_cleaning}
               name="needs_cleaning"
-              className="cleaning-box"
+              className="checkboxes"
               toggle
               // onChange={handleToggle}
             />
-            <span className="checkbox-text">Fridge Needs Cleaning?</span>
+            <span className="checkbox-text">Fridge Needs Cleaning</span>
           </div>
           <div>
             <input
               type="checkbox"
               value={newForm.maintenance_needed}
               name="maintenance_needed"
-              className="maintenance-box"
+              className="checkboxes"
               toggle
               // onChange={handleToggle}
             />
-            <span className="checkbox-text">Fridge Needs Repair?</span>
+            <span className="checkbox-text">Fridge Needs Repair</span>
             <div>
               <input className="submitButton" type="submit" value="Submit" />
             </div>
