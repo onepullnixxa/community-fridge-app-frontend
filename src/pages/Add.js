@@ -129,9 +129,9 @@ function Add(props) {
               // onChange={handleToggle}
             />
             <span className="checkbox-text">Fridge Needs Repair</span>
-            <div>
-              <input className="submitButton" type="submit" value="Submit" />
-            </div>
+          </div>
+          <div id="submit-container">
+            <input className="submitButton" type="submit" value="Submit" />
           </div>
         </form>
       </div>

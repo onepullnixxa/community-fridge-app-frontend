@@ -192,7 +192,7 @@ input[type="checkbox"] {
   font-size: var(--fs-400);
   font-weight: 900;
   /* border: 2px solid white; */
-  margin-left: 5px;
+  margin-left: 8px;
 }
 
 input[type="checkbox"]:after {
@@ -213,6 +213,24 @@ input[type="checkbox"]:checked:after {
   display: block;
 }
 
+input[type="submit"] {
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: 'has';
+  font-size: 18px;
+  color: #ff0000;
+  width: 150px;
+  background-color: #ff7e00;
+  border: 3px solid #ff0000;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+#submit-container {
+  display: flex;
+  justify-content: flex-end;
+}
 
 @media (min-width: 40em) {
   :root {
