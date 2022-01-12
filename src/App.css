@@ -18,6 +18,12 @@
   padding: 0;
 }
 
+body {
+  background-color: #ff7e00;
+  color: #ff0000;
+}
+
+
 @font-face {
   font-family: 'Sans Symbols';
   src: url(./fonts/NotoSansSymbols2-Regular.ttf);
@@ -33,10 +39,6 @@
   src: url(fonts/2F0FA1_3_0.woff);
 }
 
-body {
-  background-color: #ff7e00;
-  color: #ff0000;
-}
 
 /* HEADER */
 
@@ -169,13 +171,46 @@ label {
   border-radius: 5px;
 }
 
-.checkboxes {
-  border: 2px solid #ff0000;
+.checklist-boxes {
+  /* border: 4px solid brown; */
+  margin: 3px 3px 3px 0px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  background-color: #ffffff;
+  border: 3px solid #ff0000;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .checkbox-text {
   font-family: 'Univers-next';
   font-size: var(--fs-400);
+  font-weight: 900;
+  /* border: 2px solid white; */
+  margin-left: 5px;
+}
+
+input[type="checkbox"]:after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f00c";
+  color: #ff0000;
+  font-size: 15px;
+  display: none;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #ffffff;
+  border: 3px solid #ff0000;
+}
+
+input[type="checkbox"]:checked:after {
+  display: block;
 }
 
 

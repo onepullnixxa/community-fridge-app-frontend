@@ -75,7 +75,7 @@ function Add(props) {
             />
           </div>
           <label id="checklist-header">Checklist:</label>
-          <div>
+          <div className="checklist-boxes">
             <input
               type="checkbox"
               value={newForm.produce_needed}
@@ -86,7 +86,7 @@ function Add(props) {
             />
             <span className="checkbox-text">Produce Needed</span>
           </div>
-          <div>
+          <div className="checklist-boxes">
             <input
               type="checkbox"
               value={newForm.fruits_needed}
@@ -97,7 +97,7 @@ function Add(props) {
             />
             <span className="checkbox-text">Fruits Needed</span>
           </div>
-          <div>
+          <div className="checklist-boxes">
             <input
               type="checkbox"
               value={newForm.canned_foods_needed}
@@ -108,7 +108,7 @@ function Add(props) {
             />
             <span className="checkbox-text">Canned Foods Needed</span>
           </div>
-          <div>
+          <div className="checklist-boxes">
             <input
               type="checkbox"
               value={newForm.needs_cleaning}
@@ -119,7 +119,7 @@ function Add(props) {
             />
             <span className="checkbox-text">Fridge Needs Cleaning</span>
           </div>
-          <div>
+          <div className="checklist-boxes">
             <input
               type="checkbox"
               value={newForm.maintenance_needed}
