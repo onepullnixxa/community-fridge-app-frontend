@@ -4,6 +4,7 @@ function Add(props) {
   const [newForm, setNewForm] = useState({
     fridge_name: "",
     street_address: "",
+    zip_code: "",
     image: "",
     needs_cleaning: false,
     canned_foods_needed: false,
@@ -21,6 +22,8 @@ function Add(props) {
     props.createFridges(newForm);
     setNewForm({
       fridge_name: "",
+      street_address: "",
+      zip_code: "",
       image: "",
     });
 
@@ -69,6 +72,21 @@ function Add(props) {
               value={newForm.street_address}
               name="street_address"
               id="street-address"
+              className="input-control"
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-box">
+            <label className="label-text" for="zip-code">
+              Zip Code
+            </label>
+            <input
+              type="text"
+              pattern="[0-9]*"
+              value={newForm.zip_code}
+              name="zip_code"
+              id="zip-code"
               className="input-control"
               onChange={handleChange}
               required

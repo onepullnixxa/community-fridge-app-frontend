@@ -4,7 +4,7 @@
   --fs-500: 1.25rem;
   --fs-400: 1.25rem;
   
-  --nav: .9em;
+  --nav: .8em;
   --title: 4vh;
   --legendmargin: -5.75rem;
   --fieldsetpad: 6rem;
@@ -138,7 +138,7 @@ form {
   display: flex;
   flex-direction: column;
   align-self: flex-end;
-  margin-top: 200px;
+  margin-top: 125px;
   min-width: 40vw;
 }
 
@@ -149,7 +149,7 @@ form {
 
 label {
   font-family: 'has';
-  margin: 5px 0px;  
+  margin: 4px 0px;  
 }
 
 .label-text {
@@ -170,6 +170,12 @@ label {
   background-color: #ffffff;
   border: 3px solid #ff0000;
   border-radius: 5px;
+}
+
+.input-control:focus {
+  border-color: #ff0000;
+  outline: 0;
+  box-shadow: 0 0 0 0.1rem rgba(255, 0, 0, 0.3);  
 }
 
 .checklist-boxes {
@@ -206,7 +212,6 @@ input[type="checkbox"]:after {
   display: none;
 }
 
-
 input[type="checkbox"]:checked {
   background-color: #ffffff;
   border: 3px solid #ff0000;
@@ -229,6 +234,13 @@ input[type="submit"] {
   border-radius: 5px;
   margin-top: 15px;
   cursor: pointer;
+}
+
+input[type="submit"]:hover{
+  color: #ff7e00;
+  background-color: #ff0000;
+  border: 3px solid #ff0000;
+  transition: .3s ease;
 }
 
 #submit-container {
@@ -254,6 +266,20 @@ input[type="submit"] {
 /* For extremely small screen devices (595px and below) */
 @media only screen and (max-width: 595px) {
 
+  /* NAV BAR */
+
+  .nav-list {
+    font-size: var(--nav);
+  }
+  
+  .nav-item {
+    margin-right: 1rem;
+  }
+  
+  .nav-item:first-child {
+    margin-left: 1rem;
+  }
+
   /* ADD PAGE */
 
   .add-form-border {
@@ -264,7 +290,7 @@ input[type="submit"] {
 
   .add-titles {
     flex-direction: row;
-    position: fixed;
+    position: absolute;
     width: auto;
     font-size: 15px;
     /* border: 5px solid blue; */
@@ -274,11 +300,12 @@ input[type="submit"] {
   #add-paragraph {
     display: none;
   }
+
   .form-container {
     /* border: 5px solid purple; */
     margin: 55px auto;
     width: 100%;
-    height: 65vh;
+    height: auto;
   }
 
   form {
@@ -286,6 +313,10 @@ input[type="submit"] {
     height: auto;
     width: 100%;
     margin: auto;
+  }
+
+  label {
+    margin: 5px 0px;  
   }
 
   .label-text {
@@ -298,6 +329,26 @@ input[type="submit"] {
 
   #checklist-header {
     margin-top: 15px;
+  }
+
+}
+
+/* SHORTER MOBILE SCREEN TYPES */
+
+@media only screen and (max-height: 765px) {
+
+  /* ADD PAGE */
+
+  .add-form-border {
+    height:100vh;
+  }
+
+  .add-titles {
+    position: absolute;
+  }
+
+  #add-paragraph {
+    display: none;
   }
 
 }
