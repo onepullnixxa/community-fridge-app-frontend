@@ -50,7 +50,7 @@ function Add(props) {
         <form onSubmit={handleSubmit}>
           <div className="form-box">
             <label className="label-text" for="fridge-name">
-              Fridge Name
+              Fridge Name / Organization
             </label>
             <input
               type="text"
