@@ -3,6 +3,7 @@ import React, { useState } from "react";
 function Add(props) {
   const [newForm, setNewForm] = useState({
     fridge_name: "",
+    street_address: "",
     image: "",
     needs_cleaning: false,
     canned_foods_needed: false,
@@ -55,6 +56,20 @@ function Add(props) {
               id="fridge-name"
               className="input-control"
               // placeholder="Please enter the main street"
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-box">
+            <label className="label-text" for="street-address">
+              Street Address
+            </label>
+            <input
+              type="text"
+              value={newForm.street_address}
+              name="street_address"
+              id="street-address"
+              className="input-control"
               onChange={handleChange}
               required
             />
