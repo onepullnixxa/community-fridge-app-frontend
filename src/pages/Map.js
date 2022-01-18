@@ -17,7 +17,7 @@ function Map() {
     zoom: 3,
     bearing: 0,
     pitch: 0,
-    width: "75vw",
+    width: "100vw",
     height: "75vh",
     borderradius: "5px",
   });
